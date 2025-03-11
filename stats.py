@@ -12,7 +12,7 @@ def get_character_count(book_text):
         count = all_lower.count(c)
 
         if c not in character_count:
-            character_count[f"{c}"] = f"{count}"
+            character_count[f"{c}"] = count
 
     return character_count
 
