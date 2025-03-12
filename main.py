@@ -15,7 +15,7 @@ def main():
     #print(f"{word_count} words found in the document")
     character_count = s.get_character_count(book_text)
     dictionary = s.split_character_count(character_count)
-    formated_characters =s.format(book_location, word_count, dictionary)
-    print(formated_characters)
+    formatted_characters =s.format(book_location, word_count, dictionary)
+    return formatted_characters
 
 main()
