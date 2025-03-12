@@ -34,7 +34,4 @@ def split_character_count(character_count):
 
     return dictionary_list
 
-def sorted_characters(dictionary_list):
-    sorted = dictionary_list.sort(reverse=True, key=sort_on)
 
-    return sorted

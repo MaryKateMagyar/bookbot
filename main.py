@@ -1,6 +1,5 @@
 from stats import get_num_words
 from stats import get_character_count
-from stats import sorted_characters
 from stats import split_character_count
 from stats import sort_on
 
