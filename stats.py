@@ -28,10 +28,23 @@ def split_character_count(character_count):
             number = character_count[character]
             dictionary["character"] = character
             dictionary["count"] = number
-            dictionary_list.append(dictionary)
+            dictionary_list.append(dictionary) 
 
     dictionary_list.sort(reverse=True, key=sort_on)
 
     return dictionary_list
 
+def format(book_location, word_count, dictionary_list):
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book_location}...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+    
+    for dictionary in dictionary_list:
+        character = dictionary["character"]
+        number = dictionary["count"]
+        label = f"{character}: {number}"
+        print(label)
 
+    print("============= END ===============")

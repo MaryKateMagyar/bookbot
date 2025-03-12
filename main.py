@@ -1,7 +1,4 @@
-from stats import get_num_words
-from stats import get_character_count
-from stats import split_character_count
-from stats import sort_on
+import stats as s
 
 def get_book_text(path_to_file):
     with open(path_to_file) as f:
@@ -9,16 +6,16 @@ def get_book_text(path_to_file):
     return file_contents
 
 def main():
-    #book_text = get_book_text("books/frankenstein.txt")
-    book_text = get_book_text("books/test.txt")
+    book_location ="books/frankenstein.txt"
+    book_text = get_book_text("books/frankenstein.txt")
+    #book_location = "books/test.txt"
+    #book_text = get_book_text("books/test.txt")
     #print(book_text)
-    word_count = get_num_words(book_text)
+    word_count = s.get_num_words(book_text)
     #print(f"{word_count} words found in the document")
-    character_count = get_character_count(book_text)
-    #print(character_count)
-    dictionary = split_character_count(character_count)
-    #print(characters_sorted)
-    #dictionary.sort(reverse=True, key=sort_on)
-    print(dictionary)
+    character_count = s.get_character_count(book_text)
+    dictionary = s.split_character_count(character_count)
+    formated_characters =s.format(book_location, word_count, dictionary)
+    print(formated_characters)
 
 main()
